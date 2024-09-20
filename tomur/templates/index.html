@@ -1,0 +1,236 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="{% static 'resimler/Tomur.png' %}" sizes="32x32">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tomurcuk Gündüz Bakım Evi - Çocuğunuzun gelişimi için güvenli ve eğitici bir ortam sunuyoruz.">
+    <meta name="keywords" content="gündüz bakım evi, kreş, anaokulu, çocuk bakımı, eğitim, elazığ kreş">
+    <meta name="author" content="Tomurcuk Gündüz Bakım Evi">
+    <meta property="og:title" content="Tomurcuk Gündüz Bakım Evi - Çocuğunuz Güvende">
+    <meta property="og:description" content="Çocuğunuzun gelişimi için güvenli ve eğitici bir ortam sunuyoruz.">
+    <meta property="og:url" content="https://www.tomurcukkres.com/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 20px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  background: green;
+  box-shadow: 0 0 25px green;
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px green,
+              0 0 25px green,
+              0 0 50px green,
+              0 0 100px green;
+}
+ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Aralarındaki boşluğu artır */
+            font-family: 'Nunito', sans-serif;
+        }
+        li i {
+            margin-right: 15px; /* İkon ve metin arasındaki boşluk */
+            font-size: 24px;
+            color: #4CAF50; /* İkon rengi */
+            text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.5); /* Yeşil gölgelendirme */
+        }
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .img-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        }
+        .img-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+        }
+        
+</style>
+</head>
+  <body>
+    {% include 'partials/_navbar.html' %}
+
+
+    <!-- Arka plan olarak kullanılacak div -->
+    <section class="container-fluid py-5" style="background-image: url('/media/Untitled-1.jpg'); background-size: cover; background-position: center; height: 100vh; background-color: rgba(0, 0, 0, 0.2); background-blend-mode: overlay; position: relative;">
+        <div class="row h-100">
+            <div class="col-12 col-md-8 offset-md-1 d-flex align-items-center justify-content-center justify-content-md-start">
+                <div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start ps-md-5" style="position: relative; top: -5%;">
+                    <h6 class="text-white rounded-5 fs-5 ps-4 pe-4 pt-2 pb-2" style="background-color: green; font-family: 'Nunito', sans-serif; font-weight: 700; display: inline-block;">
+                        ELAZIĞ
+                    </h6>
+                    <h1 class="text-white" style="font-family: 'Nunito', sans-serif; font-weight: 700; margin-top: 10px;">
+                        Bir İnsanın <span style="color: green;">Anavatanı,</span><br>Çocukluğudur
+                    </h1>                    
+                    <p class="text-white" style="font-family: 'Nunito', sans-serif; font-weight: 700; margin-top: 10px;">
+                        Erken çocukluk, hayatın temel yapı taşlarının atıldığı dönemdir. <br> Gündüz Bakım, bu bilinçle, sağlıklı ve aile ortamında öğrenen bireyler yetiştirmeyi amaçlar. <br> çocukların gelişim döngüsüne uygun olarak şekillendirilmiştir.
+                    </p>
+                    <button class="shadow__btn mt-3" onclick="window.location.href='#hedef-bolum';"> 
+                        Daha Fazla Bilgi
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Resimleri buraya taşıdık -->
+        <img src="{% static 'resimler/03.png' %}" alt="Tomurcuk Gündüz Bakım Evi - Bulut" class="img-top" style="width: 100%; height: auto; object-fit: cover;">
+        <img src="{% static 'resimler/04.png' %}" alt="Tomurcuk Gündüz Bakım Evi - AltBulut" class="img-bottom" style="width: 100%; height: auto; object-fit: cover;">
+    </section>
+    
+    
+    
+    
+
+    <section id="hedef-bolum" class="container-fluid py-5" style="background-image: url(/media/Untitled-3.jpg); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; position: relative;">
+
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-12" style="margin-top: 10%;">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 18rem; border: 4px solid rgb(0, 167, 0); box-shadow: 0 4px 8px green;">
+                                <div style="position: relative; margin-top: -30px; text-align: center;">
+                                    <!-- Yeşil yuvarlak resim çevresinde -->
+                                    <img src="{% static 'resimler/livestock.png' %}" class="card-img-top rounded-circle" alt="Tomurcuk Gündüz Bakım Evi - Hayvanat Bahçesi" style="width: 120px; height: 120px; border: 4px solid rgb(0, 167, 0); padding: 8px; background-color: white;">
+                                </div>
+                                <div class="card-body" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">
+                                    <h5 class="card-title" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">Çiftliğimiz</h5>
+                                    <p class="card-text" style="color: #a2a2a2;">Çiftliğimiz, çocukların doğayı ve hayvanları tanımasını sağlar. Burada çocuklar, sorumluluk almayı, empati kurmayı öğrenir ve doğa sevgisini geliştirir. Eğitici deneyimler sunarak, onların sosyal ve duygusal gelişimini destekleriz.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col">
+                            <div class="card" style="width: 18rem; border: 4px solid rgb(0, 167, 0); box-shadow: 0 4px 8px green;">
+                                <div style="position: relative; margin-top: -30px; text-align: center;">
+                                    <img src="{% static 'resimler/father.png' %}" class="card-img-top rounded-circle" alt="Tomurcuk Gündüz Bakım Evi - Resim" style="width: 120px; height: 120px; border: 4px solid rgb(0, 167, 0); padding: 8px; background-color: white;">
+                                </div>
+                                <div class="card-body" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">
+                                    <h5 class="card-title" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">Okuma Yazmaya Hazırlık</h5>
+                                    <p class="card-text" style="color: #a2a2a2;">Okuma yazmaya hazırlık etkinliklerimizle, çocukların okul öncesi dönemde sosyal, duygusal, motor, bilişsel, dil ve öz bakım becerilerini dengeli şekilde geliştirmelerini sağlıyoruz.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card" style="width: 18rem; border: 4px solid rgb(0, 167, 0); box-shadow: 0 4px 8px green;">
+                                <div style="position: relative; margin-top: -30px; text-align: center;">
+                                    <img src="{% static 'resimler/playtime.png' %}" class="card-img-top rounded-circle" alt="Tomurcuk Gündüz Bakım Evi - Oyun Zamanı" style="width: 120px; height: 120px; border: 4px solid rgb(0, 167, 0); padding: 8px; background-color: white;">
+                                </div>
+                                <div class="card-body" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">
+                                    <h5 class="card-title" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">Çocuklar İçin Kapsamlı Etkinlik Programı</h5>
+                                    <p class="card-text" style="color: #a2a2a2;">Personelimiz, çocuklarla geniş bir yelpazede etkinlikler yürütecek; sanat, el işleri, yaratıcı oyunlar ve fiziksel aktiviteler de bu etkinlikler arasında yer alacaktır.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col">
+                            <div class="card" style="width: 18rem; border: 4px solid rgb(0, 167, 0); box-shadow: 0 4px 8px green;">
+                                <div style="position: relative; margin-top: -30px; text-align: center;">
+                                    <img src="{% static 'resimler/maternity.png' %}" class="card-img-top rounded-circle" alt="Tomurcuk Gündüz Bakım Evi - Temizlik" style="width: 120px; height: 120px; border: 4px solid rgb(0, 167, 0); padding: 8px; background-color: white;">
+                                </div>
+                                <div class="card-body" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">
+                                    <h5 class="card-title" style="text-align: center; font-family: 'Nunito', sans-serif; font-weight: 700;">Değerler Eğitimi</h5>
+                                    <p class="card-text" style="color: #a2a2a2;">Ahlaki, kültürel, ruhsal, toplumsal ve bireysel alana ilişkin uygun duyarlılık geliştirmeyi ve bunları içselleştirmeyi içerir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            
+            <!-- Üst kısmına sabitlenen resim -->
+            <img src="{% static 'resimler/03.png' %}" alt="Tomurcuk Gündüz Bakım Evi - Bulut" class="img-top" style="width: 100%; height: auto; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;">
+            <img src="{% static 'resimler/04.png' %}" alt="Tomurcuk Gündüz Bakım Evi - AltBulut" class="img-bottom" style="width: 100%; height: auto; object-fit: cover;">
+
+        </section>
+    
+    
+        <section class="container-fluid py-5" style="background-image: url('/media/ucurtma.png'); background-size: cover; position: relative;">
+            
+            <div class="container">
+                <div class="row min-vh-100 align-items-center">
+                    <div class="col-8" style="margin-top: 5%;">
+                        <p style="color: rgb(0, 159, 0); font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 40px; text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.5);">
+                            Hakkımızda
+                        </p>
+                        
+                        <p style="color: rgb(121, 121, 121); font-family: 'Nunito', sans-serif; font-weight: 700;">
+                            Elazığ’da bir ilki gerçekleştirip, hayvanat bahçesi ile kıymetli çocuklarımıza doğa ile iç içe büyümeyi, hayvan sevgisini aşılamayı ve en önemlisi, hayvanlarımızdan temin ettiğimiz ürünlerimizle %100 doğal, sağlıklı beslenme konusunda özen göstermekteyiz. Sınıflarımız, çocuklarımızın yaş gruplarına göre farklı biçimde şekillendirilmiş olup, eğitimleri de yaş gruplarına göre verilmektedir. 
+
+                            <br><br> Çocuklarımızın doğuştan getirdiği karakterlerine saygı göstererek, yaşantıları boyunca sahip olacakları kişiliklerinin 0-6 yaş döneminde şekillendiğini bilerek, “Her çocuk tektir.” ilkesinden yola çıkarak ve John Dewey’in “yaparak/yaşayarak” öğrenme modelini kendimize örnek alarak eğitim sistemimizi hayata geçirdik. Siz değerli velilerimiz ile iş birliği içerisinde sağlam temelli yolumuzda emin adımlarla yürüyeceğiz.
+
+                            <br><br> Saygılarımızla. 
+
+
+                        </br>
+                        <div class="mt-4" style="position: relative;">
+                            <a href="hakkimizda/" class="shadow__btn" style="text-decoration: none;">
+                                Daha Fazla Bilgi
+                            </a>
+                        </div>
+                                                             
+        
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <img src="{% static 'resimler/03.png' %}" alt="Tomurcuk Gündüz Bakım Evi - Bulut" class="img-top" style="width: 100%; height: auto; object-fit: cover;">
+    
+            <!-- Resimler için düzenleme -->
+            <img src="{% static 'resimler/04.png' %}" alt="Tomurcuk Gündüz Bakım Evi - ALtBulut" class="img-bottom" style="width: 100%; height: auto; object-fit: cover;">
+        </section>
+        
+    
+
+        {% include 'partials/_footer.html' %}
+        {% include 'partials/_whatsapp.html' %}
+
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+  
+
+

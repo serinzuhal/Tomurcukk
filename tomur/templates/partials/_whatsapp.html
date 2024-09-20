@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Button</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRzD/ah2Zp+WVhtgF8TNj9DRDgJqz+aq8Nu+6k5D" crossorigin="anonymous">
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .whatsapp-button img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .whatsapp-button img:hover {
+            transform: scale(1.1);
+        }
+        .instagram-button {
+    position: fixed;
+    bottom: 20px; /* WhatsApp butonunun üstünde olacak şekilde ayarlayın */
+    right: 100px;
+    z-index: 100;
+}
+.instagram-button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.instagram-button img:hover {
+    transform: scale(1.1);
+}
+
+        
+    </style>
+</head>
+<body>
+    
+    <!-- WhatsApp Butonu -->
+    {% for telefon in telefonlar %}
+
+    <a href="https://wa.me/{{ telefon.telefon|cut:"+"|cut:" " }}" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+        <img src="{% static 'resimler/whatsapp.png' %}" alt="WhatsApp Button">
+    </a>
+        
+    {% endfor %}                  
+    <a href="https://instagram.com/tomurcukkres" class="instagram-button" target="_blank" aria-label="Instagram">
+        <img src="{% static 'resimler/instagram.png' %}" alt="Instagram Button">
+    </a>
+</body>
+</html>

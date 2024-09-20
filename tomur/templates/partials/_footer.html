@@ -1,0 +1,87 @@
+{% load static %}
+
+
+<div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 ">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center justify-content-center mb-md-0 link-body-emphasis text-decoration-none mt-2" >
+            <img src="{% static 'resimler/Tomurcuk Ana Okulu -1.png' %}" alt="Tomurcuk Ana Okulu" style="width: 300px; height: 89px;">
+        </a>
+        <p class="text-body-secondary">© Copyright 2024. Tomurcık Kreş. Tüm Hakları Saklıdır</p>
+      </div>
+   
+      
+  
+      <div class="col mb-3 offset-md-2">
+        <h5 class="mb-3" style="color: #28a745; text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.5);">Önemli Bilgiler</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="{% url 'home' %}" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-home me-2"></i> Ana Sayfa
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="{% url 'hakkimizda' %}" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-info-circle me-2"></i> Hakkımızda
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="{% url 'etkinlik' %}" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-calendar-alt me-2"></i> Etkinlikler
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="{% url 'iletisim' %}" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-question-circle me-2"></i> İletişim
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+  
+  
+      <div class="col mb-3">
+        <h5 class="mb-3" style="color: #28a745; text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.5);">
+            İletişim
+          </h5>
+                  {% for telefon in telefonlar %}
+        <ul class="nav flex-column">
+          <li class="nav-item ">
+            <a href="https://www.instagram.com/tomurcukkres" class="nav-link p-0 text-body-secondary">
+              <i class="fab fa-instagram me-2"></i> Instagram
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="tel:{{ telefon.telefon }}" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-phone me-2"></i> {{ telefon.telefon }}
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="mailto:{{ telefon.email }}" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-envelope me-2"></i> {{ telefon.email }}
+            </a>
+          </li>
+          <!-- Dördüncü madde örneği -->
+          <li class="nav-item ">
+            <a href="#" class="nav-link p-0 text-body-secondary">
+              <i class="fas fa-map-marker-alt "></i> {{ telefon.adres }}
+            </a>
+          </li>
+        </ul>
+        {% endfor %}                  
+
+      </div>
+
+      <div class="col mb-3" style="text-align: left; padding-left: 0;">
+        <iframe 
+          src="https://www.google.com/maps?q=Abdullah+Paşa,+252.+Sk.+NO+:+72,+23100+El%C3%A2z%C4%B1%C4%9F+Merkez/Elaz%C4%B1%C4%9F&output=embed" 
+          width="100%" 
+          height="250" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"></iframe>
+      </div>
+      
+    </footer>
+  </div>
